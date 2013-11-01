@@ -2,7 +2,7 @@
 
 ;; Time-stamp: <2012-05-06 20:55:41 Sunday by ahei>
 
-(defconst my-emacs-path           "~/emacs/" "我的emacs相关配置文件的路径")
+(defconst my-emacs-path "/Users/ken/sourceTree/dotemacs/dea/" "我的emacs相关配置文件的路径")
 (defconst my-emacs-my-lisps-path  (concat my-emacs-path "my-lisps/") "我自己写的emacs lisp包的路径")
 (defconst my-emacs-lisps-path     (concat my-emacs-path "lisps/") "我下载的emacs lisp包的路径")
 (defconst my-emacs-templates-path (concat my-emacs-path "templates/") "Path for templates")
@@ -99,11 +99,9 @@
 (require 'linum-settings)
 
 ;; color theme Emacs主题
-(require 'color-theme-settings)
-
-(require 'ahei-face)
-(require 'color-theme-ahei)
-(require 'face-settings)
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-gnome2)
 
 ;; 高亮当前行
 (require 'hl-line-settings)
@@ -506,6 +504,10 @@ If the file does not exist, an error is thrown.")
 (require 'comint-settings)
 
 (require 'evernote-mode-settings)
+
+;;;tabbar 
+(require 'tabbar)
+(tabbar-mode)
 
 ;; session,可以保存很多东西，例如输入历史(像搜索、打开文件等的输入)、
 ;; register的内容、buffer的local variables以及kill-ring和最近修改的文件列表等。非常有用。

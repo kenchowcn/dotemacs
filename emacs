@@ -1,0 +1,1 @@
+(load-file "/Users/ken/sourceTree/dotemacs/dea/.emacs")
